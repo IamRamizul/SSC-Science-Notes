@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Notes</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./theme.js"></script>
+    <style>
+        a{
+            color: gold;
+            text-decoration: none;
+            font-size: 1.2rem;
+            
+        }
+
+
+        body{
+            padding: 0px 100px;
+            padding-bottom: 25px;
+            padding-top: 10px;
+        }
+
+        .container{
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 50px;
+            justify-content: space-around;
+            gap: 50px;
+            padding-bottom: 50px;
+        }
+
+        object{
+            height: 300px;
+            width:  250px;
+        }
+
+        .pdf-container{
+           background-color: var(--surface-bg);;
+           padding: 25px;
+           border: 1px solid var(--border-color);
+           border-radius: 20px;
+           padding-bottom: 10px;
+
+        }
+
+        h3{
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+            font-weight: bold;
+            margin-bottom: 0px;
+        }
+        button.footer-button{
+            font-size: 1.25rem;
+        }
+
+        @media (max-width: 1200px){
+            body{
+                padding: 0 25px;
+                padding-bottom: 25px;
+            }
+        }
+       
+    </style>
+</head>
+<body>
+    <button class="theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="false">
+        <span class="theme-toggle__icon" aria-hidden="true"></span>
+        <span class="theme-toggle__text">Light mode</span>
+    </button>
+    <h1>Notes for all the Chapters</h1>
+    <div class="container">
+        <div class="pdf-container">
+            <object data="./science1/pdfs/Gravitation My Notes.pdf" type="application/pdf">  </object> 
+            <h3>Gravitation</h3>
+         </div>
+
+         <div class="pdf-container">
+            <object data="./science1/pdfs/Peridic Table My Notes.pdf" type="application/pdf">  </object> 
+            <h3>Periodic Classification</h3>
+         </div>
+
+         <div class="pdf-container">
+            <object data="./science2/pdfs/Life Processes 1 My Notes.pdf" type="application/pdf">  </object> 
+            <h3>Life Processes 1</h3>
+         </div>
+         
+         <div class="pdf-container">
+            <object data="./science2/pdfs/Heredity My Notes.pdf" type="application/pdf">  </object> 
+            <h3>Heredity and Evolution</h3 >
+         </div>
+
+         <div class="pdf-container">
+            <object data="./science1/pdfs/Chemical Reactions.pdf" type="application/pdf">  </object> 
+            <h3>Chemical Reactions</h3 >
+         </div>
+         
+    </div>
+    <footer>
+        <button class="footer-button" type="button" onclick="window.location.href='./index.html'">Back to the Main Page</button>
+    </footer>
+</body>
+</html>
