@@ -44,6 +44,33 @@
 
         }
 
+        .download-button{
+            display: block;
+            width: max-content;
+            margin: 16px auto 0;
+            padding: 10px 18px;
+            border: 2px solid #b8860b;
+            border-radius: 999px;
+            background-color: gold;
+            color: #111111;
+            font-size: 1.05rem;
+            font-weight: 700;
+            text-align: center;
+            text-transform: none;
+            transition: transform 0.12s ease, box-shadow 0.12s ease, background-color 0.12s ease;
+        }
+
+        .download-button:hover,
+        .download-button:focus-visible{
+            background-color: #ffd84d;
+            color: #111111;
+            text-decoration: none;
+        }
+
+        .download-button:active{
+            transform: translateY(5px) scale(0.97);
+        }
+
         h3{
             display: block;
             text-align: center;
@@ -73,31 +100,37 @@
     <div class="container">
         <div class="pdf-container">
             <object data="./science1/pdfs/Gravitation My Notes.pdf" type="application/pdf">  </object> 
+            <a class="download-button" href="./science1/pdfs/Gravitation My Notes.pdf" download>Download</a>
             <h3>Gravitation</h3>
          </div>
 
          <div class="pdf-container">
             <object data="./science1/pdfs/Peridic Table My Notes.pdf" type="application/pdf">  </object> 
+            <a class="download-button" href="./science1/pdfs/Peridic Table My Notes.pdf" download>Download</a>
             <h3>Periodic Classification</h3>
          </div>
 
          <div class="pdf-container">
             <object data="./science2/pdfs/Life Processes 1 My Notes.pdf" type="application/pdf">  </object> 
+            <a class="download-button" href="./science2/pdfs/Life Processes 1 My Notes.pdf" download>Download</a>
             <h3>Life Processes 1</h3>
          </div>
          
          <div class="pdf-container">
             <object data="./science2/pdfs/Heredity My Notes.pdf" type="application/pdf">  </object> 
+            <a class="download-button" href="./science2/pdfs/Heredity My Notes.pdf" download>Download</a>
             <h3>Heredity and Evolution</h3 >
          </div>
 
          <div class="pdf-container">
             <object data="./science1/pdfs/Chemical Reactions.pdf" type="application/pdf">  </object> 
+            <a class="download-button" href="./science1/pdfs/Chemical Reactions.pdf" download>Download</a>
             <h3>Chemical Reactions</h3 >
          </div>
 
          <div class="pdf-container">
             <object data="./science2/pdfs/Life Processes 2 My Notes.pdf" type="application/pdf">  </object> 
+            <a class="download-button" href="./science2/pdfs/Life Processes 2 My Notes.pdf" download>Download</a>
             <h3>Life Processes 2</h3 >
          </div>
          
