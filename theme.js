@@ -24,26 +24,21 @@
     pdfObjects.forEach(function (pdfObject) {
       const pdfUrl = pdfObject.getAttribute("data");
 
-      if (!pdfUrl) {
+      if (!pdfUrl || pdfObject.parentElement.classList.contains("pdf-open-link")) {
         return;
       }
 
-      pdfObject.setAttribute("role", "link");
-      pdfObject.setAttribute("tabindex", "0");
-      pdfObject.setAttribute("title", "Open PDF in new tab");
-      pdfObject.setAttribute("aria-label", "Open PDF in new tab");
-      pdfObject.style.cursor = "pointer";
+      const opener = document.createElement("a");
+      opener.className = "pdf-open-link";
+      opener.href = pdfUrl;
+      opener.target = "_blank";
+      opener.rel = "noopener";
+      opener.title = "Open PDF in new tab";
+      opener.setAttribute("aria-label", "Open PDF in new tab");
 
-      pdfObject.addEventListener("click", function () {
-        window.open(pdfUrl, "_blank", "noopener");
-      });
-
-      pdfObject.addEventListener("keydown", function (event) {
-        if (event.key === "Enter" || event.key === " ") {
-          event.preventDefault();
-          window.open(pdfUrl, "_blank", "noopener");
-        }
-      });
+      pdfObject.style.pointerEvents = "none";
+      pdfObject.parentNode.insertBefore(opener, pdfObject);
+      opener.appendChild(pdfObject);
     });
   }
 
