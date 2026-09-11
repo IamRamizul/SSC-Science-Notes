@@ -18,6 +18,35 @@
     }
   }
 
+  function enablePdfNewTabOpen() {
+    const pdfObjects = document.querySelectorAll('object[type="application/pdf"]');
+
+    pdfObjects.forEach(function (pdfObject) {
+      const pdfUrl = pdfObject.getAttribute("data");
+
+      if (!pdfUrl) {
+        return;
+      }
+
+      pdfObject.setAttribute("role", "link");
+      pdfObject.setAttribute("tabindex", "0");
+      pdfObject.setAttribute("title", "Open PDF in new tab");
+      pdfObject.setAttribute("aria-label", "Open PDF in new tab");
+      pdfObject.style.cursor = "pointer";
+
+      pdfObject.addEventListener("click", function () {
+        window.open(pdfUrl, "_blank", "noopener");
+      });
+
+      pdfObject.addEventListener("keydown", function (event) {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          window.open(pdfUrl, "_blank", "noopener");
+        }
+      });
+    });
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     const buttons = document.querySelectorAll(".theme-toggle");
 
@@ -31,5 +60,7 @@
         buttons.forEach(updateThemeButton);
       });
     });
+
+    enablePdfNewTabOpen();
   });
 })();
