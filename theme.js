@@ -18,30 +18,6 @@
     }
   }
 
-  function enablePdfNewTabOpen() {
-    const pdfObjects = document.querySelectorAll('object[type="application/pdf"]');
-
-    pdfObjects.forEach(function (pdfObject) {
-      const pdfUrl = pdfObject.getAttribute("data");
-
-      if (!pdfUrl || pdfObject.parentElement.classList.contains("pdf-open-link")) {
-        return;
-      }
-
-      const opener = document.createElement("a");
-      opener.className = "pdf-open-link";
-      opener.href = pdfUrl;
-      opener.target = "_blank";
-      opener.rel = "noopener";
-      opener.title = "Open PDF in new tab";
-      opener.setAttribute("aria-label", "Open PDF in new tab");
-
-      pdfObject.style.pointerEvents = "none";
-      pdfObject.parentNode.insertBefore(opener, pdfObject);
-      opener.appendChild(pdfObject);
-    });
-  }
-
   document.addEventListener("DOMContentLoaded", function () {
     const buttons = document.querySelectorAll(".theme-toggle");
 
@@ -56,6 +32,5 @@
       });
     });
 
-    enablePdfNewTabOpen();
   });
 })();

@@ -33,10 +33,17 @@
 
         object{
             height: 300px;
-            width:  250px;
+            width: 100%;
+            max-width: 100%;
+            display: block;
+            box-sizing: border-box;
         }
 
         .pdf-container{
+           flex: 1 1 320px;
+           width: min(100%, 380px);
+           max-width: 100%;
+           box-sizing: border-box;
            background-color: var(--surface-bg);;
            padding: 25px;
            border: 1px solid var(--border-color);

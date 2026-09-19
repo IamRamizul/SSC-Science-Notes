@@ -57,11 +57,14 @@ a:hover {
         }
 
 .pdf-open-link {
-            display: block;
-            width: max-content;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            max-width: 100%;
             margin: 0 auto;
             color: inherit;
             text-decoration: none;
+            text-transform: none;
             cursor: pointer;
         }
 
@@ -69,6 +72,11 @@ a:hover {
 .pdf-open-link:focus-visible {
             color: inherit;
             text-decoration: none;
+        }
+
+.pdf-open-link object {
+            display: block;
+            max-width: 100%;
         }
 
 .footer-button {
