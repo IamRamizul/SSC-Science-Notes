@@ -284,7 +284,13 @@ hr {
    li{
         font-size: 1.3rem;
        }
+
+  .pdf-container{
+  height: 500px;
+}     
 }
+
+
 
 /* ---------------------- */
 /* 📲 TABLETS */
@@ -309,6 +315,9 @@ hr {
   h2{
     font-size: 1.9rem;
   }
+  .pdf-container{
+  height: 600px;
+}  
 }
 
 /* ---------------------- */
@@ -331,6 +340,10 @@ hr {
   h2{
   font-size: 2rem;
   }
+
+  .pdf-container{
+  height: 800px;
+}  
 
 }
 
