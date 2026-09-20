@@ -112,34 +112,18 @@ li{
   font-size: larger;
 }
 
-.pdf-container {
-  width: min(100%, 1100px);
-  max-width: 100%;
-  margin: 20px auto;
-}
+
 
 object {
   display: block;
   box-sizing: border-box;
   border: 1px solid var(--border-color);
   border-radius: 5px;
-  margin-top: 20px;
-  margin-left: 0;
-  width: 100%;
-  max-width: 100%;
-  min-width: 0;
-  height: 1000px;
 }
 
-@media (max-width: 760px) {
-  object {
-    width: 100%;
-    height: min(600px, 70vh);
-    min-height: 400px;
-    margin: 0;
-  }
 
-}
+
+
 .pdf-container {
   display: flex;
   flex-direction: column;
@@ -286,8 +270,13 @@ hr {
        }
 
   .pdf-container{
-  height: 500px;
+    height: 450px;
+    width: 320px;
+    margin: auto;
 }     
+
+
+
 }
 
 
@@ -316,7 +305,9 @@ hr {
     font-size: 1.9rem;
   }
   .pdf-container{
-  height: 600px;
+    height: 450px;
+    width: 320px;
+    margin: auto;
 }  
 }
 
@@ -341,11 +332,21 @@ hr {
   font-size: 2rem;
   }
 
-  .pdf-container{
-  height: 800px;
+  .pdf-container {
+  height: 900px;
+  width: 80%;
+  margin: auto;
+  padding: 25px 50px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+object{
+  height: 100%;
+  width: 100%;
+}
 }  
 
-}
 
 h1 {
   font-size: 2rem;
@@ -366,4 +367,12 @@ li {
 
 li{
   margin-left: 20px;
+}
+
+
+@media(max-width: 500px){
+  object{
+  height: 100%;
+  width: 100%;
+}
 }
